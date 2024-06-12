@@ -36,9 +36,9 @@ export default function NavBar(props) {
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form> */}
-      <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.changeThemee}></input>
-  <label class="form-check-label" for="flexSwitchCheckDefault" style={{color:props.themee=='light'?'black':'white'}}>{props.themee=='dark'?'light':'dark'}</label>
+      <div className="form-check form-switch">
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.changeThemee}></input>
+  <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:props.themee=='light'?'black':'white'}}>{props.themee=='dark'?'light':'dark'}</label>
 </div>
       
 
@@ -49,5 +49,6 @@ export default function NavBar(props) {
   )
 }
 NavBar.propTypes={
-    theme:PropTypes.string,
+    themee:PropTypes.string.isRequired,
+    changeThemee:PropTypes.func.isRequired,
 }
