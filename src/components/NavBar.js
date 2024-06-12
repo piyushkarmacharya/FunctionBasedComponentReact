@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
+import PropTypes from 'prop-types';
 
-export default function NavBar() {
+export default function NavBar(props) {
+  
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className={`navbar navbar-expand-lg bg-${props.themee} navbar-${props.themee} `}>
   <div className="container-fluid">
     <a className="navbar-brand" href="/">Club Desperado</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,8 +37,8 @@ export default function NavBar() {
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form> */}
       <div class="form-check form-switch">
-  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"></input>
-  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.changeThemee}></input>
+  <label class="form-check-label" for="flexSwitchCheckDefault" style={{color:props.themee=='light'?'black':'white'}}>{props.themee=='dark'?'light':'dark'}</label>
 </div>
       
 
@@ -45,4 +47,7 @@ export default function NavBar() {
 </nav>
     </div>
   )
+}
+NavBar.propTypes={
+    theme:PropTypes.string,
 }
