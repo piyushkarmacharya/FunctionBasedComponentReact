@@ -41,26 +41,26 @@ function App() {
   const router=createBrowserRouter([
     {
       path:"/",
-      element:<><NavBar themee={themee} changeThemee={changeThemee}/><Home/></>
+      element:<><NavBar themee={themee} changeThemee={changeThemee}/><Alert alert={alert} ></Alert><Home/></>
     },
     {
       path:"/column",
-      element:<><NavBar themee={themee} changeThemee={changeThemee}/><Column/></>
+      element:<><NavBar themee={themee} changeThemee={changeThemee}/><Alert alert={alert} ></Alert><Column/></>
     },
     {
       path:"/about",
-      element:<><NavBar themee={themee} changeThemee={changeThemee}/><About/></>
+      element:<><NavBar themee={themee} changeThemee={changeThemee}/><Alert alert={alert} ></Alert><About/></>
     },
     {
       path:"/user/:username",
-      element:<><NavBar themee={themee} changeThemee={changeThemee}/><User/></>
+      element:<><NavBar themee={themee} changeThemee={changeThemee}/><Alert alert={alert} ></Alert><User/></>
     }
   ]);
   return (
     <>
    
     <RouterProvider router={router}/>
-    <Alert alert={alert} ></Alert>
+    
     
     </>
     
