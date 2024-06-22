@@ -26,7 +26,8 @@ function App() {
     }, 3000);
   }
   
-  const changeThemee=(event)=>{
+  const changeThemee=(abc)=>{
+    console.log(abc);
     document.body.style.backgroundColor = themee === 'light' ? '#212529' : 'white';
     document.body.style.color = themee === 'light' ? 'white' : 'black';
     if(themee==='light'){

@@ -42,7 +42,7 @@ export default function NavBar(props) {
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form> */}
       <div className="form-check form-switch">
-  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.changeThemee}></input>
+  <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={()=>{props.changeThemee('haha')}}></input>
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:props.themee==='light'?'black':'white'}}>{props.themee==='dark'?'light':'dark'}</label>
 </div>
       
